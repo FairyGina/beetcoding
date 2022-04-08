@@ -1,4 +1,4 @@
-비트코딩 문제풀이
+비트코딩
 
 1번
 print(2020)
@@ -440,8 +440,7 @@ print(boolean_1)
 
 59번
 num=5
-boolean_1=num%3==0|(num%2==0)
-print(boolean_1)
+print(num%3==0|num%2==0)
 
 60번
 print('작은따옴표')
@@ -887,56 +886,391 @@ list2=['12','34','56']
 print(dict(list2))
 
 114번
+height={'Jun':178,'Mina':164}
+print(height.get('Jun'))
+height['Tom']=182
+print(height)
+
+a=height.pop('Mina')
+print(a,height)
+height['Robin']=146
+b=height.popitem()
+print(b,height)
+
+newheight={'billy':188,'Dony':172}
+height.update(newheight)
+print(height)
+
+print(height.keys())
+print(height.values())
+print(height.items())
+
+115번
+Dahyun={'height' : '158cm','age' : 21,'birth' : 'May 28th','group' : 'twice'}
+print('Dahyun is',Dahyun.get('height'))
+print('Dahyun belongs to',Dahyun.get('group'))
+
+116번
+tony={'korean':100,'english':93,'mathematics':98,'science':86}
+average=sum(tony.values())/4
+print(average)
+
+117번
+{'김연아': '피겨스케이팅', '박지성': '축구'}
+{'김연아': '피겨스케이팅', '박지성': '축구', '정현': '테니스'}
+{'김연아': '피겨스케이팅', '정현': '테니스'}
+
+118번
+jobs={'김연아':'피겨스케이팅',
+'박지성':'축구',
+'정현':'테니스',
+'박태환':'수영'}
+var=input('운동선수 입력 : ')
+result=jobs.get(var)
+print('{}(은)는 {} 선수이다.'.format(var,result))
+
+119번
+grade={'Wonjeong':99,'Kyunghoo':76,'Hyunsoo':83}
+print(sum(grade.values())/len(grade))
+
+120번
+myset={1,2,3}
+print(myset)
+print(type(myset))
+
+myset={'ice',1.2,(1,3,5)}
+print(myset)
+
+myset={1,2,3,2,3,2,2}
+print(myset)
+
+121번
+a={1,2,3,5,6,8}
+b={1,3,4,5,6,7}
+
+print(a.union(b))
+print(a.intersection(b))
+print(a.difference(b))
+print(a.symmetric_difference(b))
+
+122번
+myset={1,3,5}
+print(myset)
+myset.add('A')
+print(myset)
+myset.update({1,3},{2,3})
+print(myset)
+
+print(myset.pop())
+print(myset)
+print(myset.pop())
+myset={'apple','melon','strawberry','grape'}
+print(myset)
+
+myset.discard('strawberry')
+print(myset)
+myset.remove('grape')
+print(myset)
+
+myset.clear()
+print(myset)
+
+123번
+a={10,20,70,90}
+b={10,30,40,70}
+
+print(a|b)
+print(a.union(b))
+
+print(a&b)
+print(a.intersection(b))
+
+print(a^b)
+print(a.symmetric_difference(b))
+
+print({10,20,70,80,90}.issuperset(a))
+print({20,30,50}<=a)
+print({10,30,40}<=b)
+print({10,20,30,50,70,90}>=a)
+
+124번
+True
+False
+3    
+3  
+
+125번
+myset=set([1,2,3,4,5])
+print(myset)
+myset.remove(1)
+myset.remove(3)
+myset.remove(4)
+myset.add(7)
+myset.add('ferren')
+myset.add(11)
+print(myset)
+
+126번
+{1, 2, 4, 5}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+True
+True
+
+127번
+num16={1,2,4,16}
+num30={1,2,3,5,6,10,15,30}
+print(num16&num30)
+
+128번
+a,b,c,d,e,f,g,h,i,j=input().split()
+a=int(a); b=int(b); c=int(c); d=int(d); e=int(e); f=int(f); g=int(g); h=int(h); i=int(i); j=int(j)
+numset=[a,b,c,d,e,f,g,h,i,j]
+print(max(numset))
+
+129번
+if(len(i)==5):
+    b.append(i)
+
+130번
+list1.sort()
+list1.reverse()
+*list1.sort(reverse=True)
+
+131번
+Dohee={'수학':76,'과학':89,'영어':93}
+Juwon={'수학':88,'과학':87,'영어':100}
+SeoHee={'수학':86,'과학':93,'영어':82}
+average={sum(Dohee.values())/len(Dohee),sum(Juwon.values())/len(Juwon),sum(SeoHee.values())/len(SeoHee)}
+for i in average:
+    print(i)
+print(sum(average)/len(average))
 
 
+143번
+number=int(input("Enter the number:"))
+if(number%2==0):
+    print('even number')
+else:
+    print('odd number')
+
+144번
+number=int(input("Enter the number:"))
+number/=10000
+print(number)
+if(number>=53):
+    print('old')
+
+145번
+num=13
+print(num%2==0|num%3==0)
+*num=13
+if(num%2==0|num%3==0):
+    print('True')
+else:
+    print('False')
+
+146번
+height=int(input())
+if(height>184):
+    print('Tall')
+elif(height<146):
+    print('Short')
+else:
+    print('Regular')
+
+147번
+grade=input()
+if(grade=='A'|grade=='B'):
+    print('참 잘했습니다.')
+if(grade=='C'|grade=='D'):
+    print('좀 더 노력하세요.')
+if(grade=='F'):
+    print('다음 학기에 다시 수강하세요.')
+
+148번
+year=int(input())
+if(year%4==0):
+    if((year%100==0)&(year%400!=0)):
+        print('평년')
+    else:
+        print('윤년')
 
 
+149번
+1) a,b=map(int,input().split())
+print(abs(a-b))
+2)num=list(map(int,input().split()))
+print(max(num)*min(num)-(sum(num)-max(num)-min(num)))
 
+150번
+x,y=map(int,input().split())
+print((x>50&x<100)&(y>40&y<80))
 
+151번
+string=input()
+string = string.lower()
+if(string.startswith('a')|string.startswith('b')|string.startswith('c')|string.startswith('d')|string.startswith('e')):
+    print('Good Sentence')
 
+152번
+colors=['red','orange','blue','green','white','black','dark blue','purple']
+add=input()
+if add in colors:
+    print('Sorry')
+else:
+    colors.append(add)
+    print(colors)
 
+153번
+a=int(input('enter 1st number: '))
+b=int(input('enter 2nd number: '))
+print('Nice') if a+b>=0.5*a*b else print('Bad')
 
+154번
+a,b,c=map(int,input().split())
+print(a) if (a<b)&(a<c) else print(b) if (b<a)&(b<c) else print(c)
 
+155번
+a=int(input())
+print('양수') if a>0 else print('음수')
+print('홀수') if a%2!=0 else print('짝수')
+print('3의 배수',a%3==0) if a%3==0 else print('3의 배수',a%3==0)
+print('5의 배수',a%5==0) if a%5==0 else print('5의 배수',a%5==0)
 
+156번
+a,b,c=input().split()
+a=int(a); c=int(c)
+if b=='+': print(a+c)
+if b=='-': print(a-c)
+if b=='*': print(a*c)
+if b=='/': print(a/c)
 
+157번
+import random
+list1=['a','b','c','d']
+print(list1)
+random.shuffle(list1)
+print(list1)
+random.shuffle(list1)
+print(list1)
+chr1=random.choice(list1)
+print(chr1)
 
+158번
+import random
+n = random.randrange(1,100)
+while True:
+    ans1=input("Guess number (Q to exit)")
+    if ans1.upper()=="Q":
+        break
+    ans2=int(ans1)
+    if(n==ans2):
+        print("Correct!")
+        break
+    elif(n>ans2):
+        print("Choice higher number")
+    else:
+        print("Choice lower number")
 
+159번
+import random
+n=random.randrange(10,100)
+print(n)
 
+160번
+import random
+n=random.uniform(0,10)
+print(round(n,1))
+*import random
+num=round(random.random()*10,1)
+print(num)
 
+161번
+import random
+a,b=map(int,input().split())
+n=random.randrange(a,b)
+if(abs(a-b)==1):
+    print('no integer betwwen two numbers')
+else:
+    print(n)
 
+162번
+import random
+num=[]
+for i in range(4):
+    num.append(random.randrange(10,21))
+print(num)
+print(sum(num)/4)
+if(sum(num)/4>14):
+    print('Big')
+else:
+    print('small')
 
+163번
+import random
+n=random.randrange(1,3)
+user=int(input('level1 (1~2) : '))
+if(user!=n):
+    print('Failure!\nAnswer is :',n)
+else:
+    print('Correct!')
+    n=random.randrange(1,5)
+    user=int(input('level2 (1~4) : '))
+    if(user!=n):
+        print('Failure!\nAnswer is :',n)
+    else:
+        print('Correct!')
+        n=random.randrange(1,9)
+        user=int(input('level1 (1~8) : '))
+        if(user!=n):
+            print('Failure!\nAnswer is :',n)
+        else:
+            print('Lucky')
 
+164번
+import random
+cars=['Hyundai','Kia','BMW','Benz']
+print(cars)
+random.shuffle(cars)
+print(cars)
+print(cars[0]=='Hyundai')
 
+165번
+i=5
+print("Count Down Starts!")
+while i>=0:
+    print(i)
+    i-=1
+print("Boom!")
 
+166번
+i=1
+while True:
+    i+=1
+    if 3<=i<=5:
+        continue
+    print(i,'번째......')
+    if i==7:
+        break
 
+167번
+num=10
+while num<=18:
+    print(num)
+    num+=2
 
+168번
+1248163264
 
+169번
+while True:
+    str=input('Enter the alphabet : ')
+    if(str=='q'):
+        print('finish')
+        break
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+170번
 
 
 
