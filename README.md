@@ -1271,11 +1271,133 @@ while True:
         break
 
 170번
+num1=int(input('First num : '))
+num2=int(input('second num : '))
+if(num1>num2):
+    max=num1; min=num2
+else:
+    max=num2; min=num1
+i=1
+while True:
+    i+=1
+    if(i*5>=max): break
+    if(min<=i*5):
+        print(5*i)
+        continue
 
+171번
+mylist=[1,5,4,9,2]
+for i in mylist:
+    print(i,end='')
+print()
+mytuple=(1,3,'red',(2,5))
+for i in mytuple:
+    print(i,end=' ')
+print()
 
+172번
+for i in range(5):
+    print(i,end=' ')
+print()
+for i in range(2,7):
+    print(i,end=' ')
+print()
+for i in range(10,5,-1):
+    print(i,end=' ')
+print()
+for i in range(10,0,-2):
+    print(i,end=' ')
+print()
 
+173번
+l=[1,9,4,13,5,6]
+for i in l:
+    if i in range(5,10):
+        print('data in the list : ',i)
+        continue
+    elif i==13:
+        print('we find 13')
+        break
 
+174번
+cake 1      
+strewberry 2
+100 4       
+chovo 8     
+3.14 16     
 
+175번
+4
+
+176번
+a=int(input('Enter the 1st number : '))
+b=int(input('Enter the 2nd number : '))
+if a>b:
+    b=a; a=b
+sum=0; i=a
+for i in range(a,b):
+    if(a<=3*i<b):
+        sum+=3*i
+    i+=1
+print(a'부터',b,'까지 3의 배수의 합은',sum)
+
+177번
+integral=int(input('정수를 하나 입력하시오: '))
+i=1; num=0
+for i in range(integral+1):
+    num+=i; i+=1
+print('1부터 7까지의 합은',num)
+
+178번
+2
+
+179번
+621
+
+180번
+a=int(input("Enter the number: "))
+i=1
+res=0
+while(i<=a):
+    if(a%i==0):
+        res+=1
+    i+=1
+if(res==2):
+    print(a, "is prime number")
+else:
+    print(a, "is not prime number")
+
+181번
+n=int(input("Enter the number: "))
+res=0
+while(n>0):
+    res+=n%10
+    n//=10
+print(n,"의 각 자리수의 합은", res)
+
+182번
+
+183번
+
+184번
+
+185번
+
+186번
+sum=0
+while sum<=20:
+    sum=0
+    num=input("Enter the number: ")
+    for i in num:
+        sum+=int(i)
+print('finish')
+
+187번
+for i in range(1,10):
+    for j in range(1,10):
+        print("{}x{}={}".format(i,j,i*j))
+
+188번
 
 
 
